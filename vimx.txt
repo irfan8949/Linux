@@ -1,0 +1,113 @@
+Vim improved : is a power full text editor use for tha linux/unix system.
+
+Vim use for mostly 3 usely mode
+
+1. Normal mode :- for commend 
+2. Inster mode :- for typing test
+3. commend mode :- for save , quit, serch, replace
+
+
+#Inster Mode :
+   
+  Key                      Action
+  i            :           insert befor curser
+  I            :           frist element curser only  
+  a            :           insert afer curser
+  A            :           back side only for line
+  o            :           line next back
+  O            :           line next back
+  Esc          :           Escape
+
+# Cursor move :
+
+   key                     Action
+   h                       lift
+   l                       right
+   j                       down
+   k                       up
+   0                       line start for the curser
+   $                       line end
+   gg                      file start
+   G                        file end
+  :1110                     point  the 1110 line the cureser
+
+
+# Text delet
+
+ key                     Action
+ X                       character delete
+ dd                      line delete 
+ dw                      one word delete
+ d$                      cursor end all line  delete
+ d0                      start cursor on line delete
+
+
+# Cut , copy , pest:
+
+key                 Action
+y                   line copy
+yw                  word copy
+V                   sclact 
+cut :
+dd              line cut
+
+past :
+
+p              end(last)/ end past
+P              uper / farst past
+
+# Undo & Redo
+
+key                   Action     
+u                     Undo
+ctrl                  redo     
+
+# Serach :
+
+/word               first element search
+?word               lest element search      
+n                    - next down
+N                     previous up
+
+#Replace (find & replace) :-
+
+key
+ 
+:%s/old/new/g
+
+g = all replace
+c = confiarmtion
+
+example:
+
+:%s/old/new/g
+
+s= substitute(repace)
+old = old word/ text serach
+new = new word/txt add
+
+
+#visual mode (text select)
+
+v  character select
+V  line selet
+Ctrl+v   block
+
+--visual
+  
+
+#Multiple file open 
+ 
+vim file1 file2
+
+switch 
+
+
+:n 
+:p
+
+#help mode : vim
+
+
+ :help insert
+                 

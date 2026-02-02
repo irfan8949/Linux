@@ -1,0 +1,35 @@
+Nano :-
+       Nano editor – all important commands in Linux
+   
+   terminal based text editar
+     file write
+     file editing
+     linux file confing chang
+ nano --verion{commend}
+1 sudo apt update
+2 sudo apt install nano
+
+open for nano : nano file:txt
+
+old file open in use for commend
+ nano /path/file.txt
+
+example:
+ nano test.txt
+
+
+1 Nano screcn
+  ^ -> ctrl
+
+2 file save command
+ (A) Ctrl+0
+ (B) confiram file name
+ (C) enter
+
+3 Exit:
+
+ctrl+x
+
+4. Nano commands
+ key                 Aoction
+
