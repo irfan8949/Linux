@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multipal</title>
+    </head>
+    <body>
+        <p id="same"></p>
+        
+    </body>
+</html>
+<script>
+    let net = "";
+    for(let x = 5; x>= 1; x--){
+        for(let y =x; y <= 5; y++)
+            {
+                net += y;
+            }
+     net += "<br>";    
+    }
+    document.getElementById("same").innerHTML=net;
+</script>

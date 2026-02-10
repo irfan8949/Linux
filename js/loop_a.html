@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numbring</title>
+    </head>
+    <body>
+        <input type="text"  id = "star" placeholder="Number">
+        <p>
+            <button onclick="set()">click</button>
+        </p>
+        <p id ="demo"></p>
+
+    </body>
+</html>
+<script>
+    function set(){
+        let name_left = document.getElementById("star").value;
+
+        if(name_left ===""){
+            return ;
+        }
+
+        let tab = name_left;
+         
+        
+        let name = "";
+        for(let x = 1; x<=5; x++){
+            for(let y = 1; y <= x; y++){
+                name += tab;
+            }
+             name += "<br>";
+            
+        }
+
+      document.getElementById("demo").innerHTML= name;  
+    }
+
+</script>

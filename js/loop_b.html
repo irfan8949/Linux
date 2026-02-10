@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uper Dowan</title>
+    </head>
+    <body>
+        <input type="text" id = "shwo" placeholder = "Type"></input>
+        <p>
+            <button onclick="code()">Click Uper</button> 
+        </p>
+        <input type="text" id = "set" placeholder = "Type"></input>
+        <p>
+            <button onclick="cod()">Click Down</button> 
+        </p>
+
+        <p id="demo"></p>
+    </body>
+</html> 
+<script>
+    function code(){
+         let out = document.getElementById("shwo").value;
+
+         
+         if( out === ""){
+            return;
+         }
+         
+        let name = "";
+        for(let x = 1; x<=10; x++ ){
+            for(let y = 10; y>=x; y--){
+                name =name+"&nbsp;&nbsp;"
+            }
+            for(let z = 1; z<=2*x-1;z++){
+                name += out;
+            }
+            name +="<br>";
+        }
+        document.getElementById("demo").innerHTML = name;
+    }
+
+    
+    function cod(){
+         let ou = document.getElementById("set").value;
+
+         
+         if( ou === ""){
+            return;
+         }
+         
+        let nam = "";
+        for(let q= 10; q>=1; q--){
+            for(let t = 10; t>q; t--){
+                nam =nam+"&nbsp;&nbsp;"
+            }
+            for(let p = 1; p<=2*q-1;p++){
+                nam += ou;
+            }
+            nam +="<br>";
+        }
+        document.getElementById("demo").innerHTML = nam;
+    }
+</script>

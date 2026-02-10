@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>stare</title>
+    </head>
+    <body>
+        <p id = "set">Print the stare</p>
+    </body>
+</html>
+<script>
+    let str = "";
+for(let i =1; i<= 5; i++){
+    for(let j = 5; j>=i ; j--){
+        str += "*";
+
+    }
+    str +="<br>";
+}
+document.getElementById("set").innerHTML = str;
+</script>

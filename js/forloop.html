@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>for loop</title>
+    </head>
+    <h1>What is the table of two</h1>
+    <input type="text" id = "table_text" placeholder="Numer type" >
+    <P><button onclick="set()"> click</button></P>
+    <p id = "two">
+         
+    </p>
+     
+</html>
+<script>
+
+    function set(){
+                  
+        var table_name = document.getElementById('table_text').value;
+    
+         let val ="";
+          
+           for (let x = 10; x>=1; x--){
+           val += (table_name*x) +"<br>";
+    
+
+     
+             }
+    
+            document.getElementById("two").innerHTML= val;
+     }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+    <style>
+        table ,th,td {
+          border:  1px solid;
+        }
+    </style>
+    
+        <title>Demo</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+        
+        <tbody id = "not">
+            <tr >
+                <td></td>
+                <td></td>
+            </tr>
+             
+        </tbody>
+        </table>
+        <p id = "shwo"></p>
+    </body>
+             
+</html>
+<script>
+     let table_name = document.getElementById("not").innerHTML = "";
+     
+                 
+     let no = table_name;
+
+     let y = "";
+    for( let x = 1; x<10; x++){
+        y += no;
+
+    }
+    document.getElementById("not").innerHTML =y;
+</script>

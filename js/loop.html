@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>loop</title>
+    </head>
+    <body>
+<h1>Loop tutorial</h1>
+<input type="text" id="table_value" placeholder="which table you want ?" />
+<p>
+    <button onclick="findtable()">submit</button>
+</p>
+<p id="counter"></p>
+    </body>
+ </html>
+ <script>
+
+
+
+
+function findtable()
+  {
+
+ var table_name = document.getElementById("table_value").value;
+ console.log(table_name);
+
+var allstring = "";
+var table = table_name;
+for(var irfan = 1;irfan <= 10 ; irfan++ ){
+   allstring = allstring+"<h4>"+table+"*"+irfan+"="+irfan*table+"</h4>";
+    }
+
+    document.getElementById("counter").innerHTML = allstring;
+
+
+
+
+  } 
+
+ </script>

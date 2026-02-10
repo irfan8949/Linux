@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html>
+    <head></head>
+        <body>
+            <h1> Hello Word</h1>
+            <p id = "demo"> Hello</p>
+            <p id = "name">On</p>
+             
+             <button type="button" onclick= "hello()">Click ON</button>
+             <button type = "button" onclick = "get()"> Save</button>
+
+             <script>
+                var x = true;
+                function hello(){
+                    if (x ==false){
+                        document.getElementById("demo").innerHTML= "How are you";
+                        document.getElementById("demo").innerHTML= "Hello";
+                        x = true;
+                    }
+                    else {
+                        document.getElementById("demo").innerHTML= "Hello";
+                        document.getElementById("demo").innerHTML= "How are you";
+                        x = false;
+
+                }
+            }
+
+                let y = true;
+                function get() {
+                    if (y ==false)
+                        document.getElementById("name").innerHTML= "hi";
+                    else 
+                        document.getElementById("name").innerHTML= "h";
+y= !y;
+           
+}
+
+             
+              
+
+            
+
+             </script>
+      </body>
+
+  </html>

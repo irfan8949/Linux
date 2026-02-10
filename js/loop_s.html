@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tipal</title>
+    </head>
+    <body>
+        <input type="text" id = "star" placeholder="Numer type" >
+        <p><button onclick="set()">click</button></p>
+        <p id="same"></p>
+
+        
+    </body>
+</html>
+<script>
+    function set (){
+      
+        var tab = document.getElementById("star").value;
+        
+
+        if( tab === ""){
+            return;
+
+        }
+
+    let net = "";
+    for(var x = 1; x<= 5; x++){
+       
+       
+       
+        for(let y =5; y >= x; y--)
+            { 
+               net= net+"&nbsp;&nbsp;";
+                 
+            }
+       
+       
+       
+        for(let i =1;i <=2*x-1; i++)
+            { 
+               net+=tab;
+                
+                 
+            }
+
+
+
+     net += "<br>";    
+    }
+    document.getElementById("same").innerHTML=net;
+}
+</script>
