@@ -1,4 +1,4 @@
-<!DOCTYPE html>>
+<!DOCTYPE html>
 <html>
     <head>
     <style>
@@ -10,7 +10,7 @@
         <title>Demo</title>
     </head>
     <body>
-        <table>
+        <table style="width: 200px;">
             <thead>
                 <tr>
                     <th>Sr.No</th>
@@ -19,11 +19,7 @@
             </thead>
         
         <tbody id = "not">
-            <tr >
-                <td></td>
-                <td></td>
-            </tr>
-             
+           
         </tbody>
         </table>
         <p id = "shwo"></p>
@@ -31,15 +27,20 @@
              
 </html>
 <script>
-     let table_name = document.getElementById("not").innerHTML = "";
-     
-                 
-     let no = table_name;
-
+      
+     var name_row = ["Ram","Sayam", "Vikash","Lacki", "tnuj","viki","Ruhan","Sanju","Pankaj", "Ankit"];
+      var nam = name_row.length;
+      
      let y = "";
-    for( let x = 1; x<10; x++){
-        y += no;
+    for( let x = 0; x<nam; x++){
+        y += "<tr><td>"+(x+1)+"</td><td>"+name_row[x]+"</td></tr>";
+         
 
     }
     document.getElementById("not").innerHTML =y;
+
+     document.getElementById("shwo").innerHTML = name_row[7];
+
+
+console.log(name_row[7]);
 </script>

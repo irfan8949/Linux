@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table ,th ,td{
+                border: 1px solid ;
+            }
+        </style>
+        <title>Demo</title>
+    </head>
+    <body>
+        <h1>Add Student</h1>
+        <p>Name :<input type="text"  id = "text_box" placeholder="Type Name"></p>
+        <p>
+            <button onclick="irfan()">Add</button>
+        </p>
+        <table>
+            <thead> 
+                <tr>
+                   <th>Sr. No</th>
+                   <th>Name</th>
+                   <th>Operend</th>
+                </tr>
+            </thead>
+            <tbody id = "table">
+                 
+            </tbody>
+        </table>
+    </body>
+</html>
+<script>
+       var name_out = []
+    function irfan(){
+        let table_name = document.getElementById("text_box").value;
+        
+    name_out.push(table_name)
+        
+      
+        let out = name_out.length;
+        let y = "";
+        for(let x = 0;x<out;x++){
+            y += "<tr><td>"+(x+1)+"</td><td>"+name_out[x]+"</td><td><input type='button' value='delete' onclick = 'hello("+x+")'></td></tr>";
+            
+             function hello(){
+                name_out.splice('','')
+             }
+
+        }
+        document.getElementById("table").innerHTML= y;
+
+    }
+</script>
