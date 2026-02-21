@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array function
+        </title>
+    </head>
+    <body>
+        <ul id="demo"></ul>
+    </body>
+</html>
+<script>
+    var final_html = "";
+    let arr = ["Ram", "Syame", "Sindo", "Sivame",{name : "Rakash"}];
+    arr.push("Luckay");
+    array = arr.length;
+    console.log(array);
+    
+    console.log(typeof(arr));
+    arr.forEach(collvalue);
+    console.log(Array.isArray(arr))
+    console.log(arr[4].name)
+    console.log(arr[5]);
+    console.log(arr[4] instanceof Array);
+    console.log(arr instanceof Array);
+    
+    function collvalue(value){
+    final_html = final_html + "<li> Mr. "+value+"</li>";
+
+    }
+    document.getElementById("demo").innerHTML = final_html;
+    </script>

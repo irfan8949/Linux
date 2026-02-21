@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <style>
+            table  ,th ,td{
+                border: 1px solid;
+                margin-left: auto; 
+                margin-right: auto;
+                
+
+            } 
+            th{
+                background-color: #1f6f83;
+                color: white;
+                padding: 10px;
+            }
+            td {
+                padding: 8px;
+            }
+            body {
+                text-align: center;
+                background-color: rgb(245, 251, 252);
+
+            }
+            tr:hover {background-color: rgb(182, 47, 47);}
+        </style>
+        <title>form</title>
+    </head>
+    <body>
+        <div class="container">
+
+  <div class="alert alert-danger" id ="alert_message" style="visibility:hidden">
+    <strong>Danger!</strong> Please add student name
+  </div>
+  <div class="alert alert-" id ="alert_scusfuly" style="visibility: hidden;">
+    <strong></strong>
+  </div>
+
+
+
+
+        <h1>Student Information</h1>
+        <p> Student Name : <input type="text" id = "clip_box" placeholder="Frist"></p>
+                               <p> <button class="btn btn-primary"  id ="up_date" onclick="button_placeholder()" >Add</button> <button class="btn btn-danger" onclick="remove()">Cancel</button> </p>
+
+                               <table width = 500px>
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No</th>
+                                        <th>Name</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                    </thead>
+                                 <tbody id = "table"></tbody>
+                               </table>
+
+                        </div>
+                
+    </body>
+</html>
+<script> 
+    var arr_name = []
+    var update_index = -1;
+        function button_placeholder(){
+            var table_data = document.getElementById("clip_box").value;
+            if(table_data==""){
+                document.getElementById("alert_message").style.visibility="visible";
+                setInterval(function () {
+                    
+                   document.getElementById("alert_message").style.visibility="hidden";
+                
+                }, 5000);
+                return false;
+            }
+                            
+              if(update_index == -1){
+                arr_name.push(table_data)
+              }else
+              {
+                 arr_name[update_index] = table_data;
+                 update_index = -1;
+                 document.getElementById("up_date").innerHTML = "Add";
+              }
+              
+                     printvalue() ; 
+                remove();
+                           
+               
+                
+       }
+           function remove(){
+             document.getElementById("clip_box").value ="";
+             
+           }
+           
+         function del(index){                  
+          arr_name.splice(index,1);
+          printvalue()
+        }
+
+         function edit_name(index){
+            document.getElementById("clip_box").value =arr_name[index];
+            update_index = index;
+            document.getElementById("up_date").innerHTML ="Update";
+            
+            
+
+                           
+            printvalue()
+         }
+
+         
+
+
+
+        function printvalue(){
+           let arr_lenth = arr_name.length; 
+            let y = "";
+            for(let x = 0;x<arr_lenth;x++){
+              y += "<tr><td>"+(x+1)+"</td><td>"+arr_name[x]+"</td><td><button class='btn btn-info btn-lg'  onclick= 'edit_name("+x+")'><span class='glyphicon glyphicon-pencil'></span> </button> </td><td><button class='btn btn-danger'  onclick= 'del("+x+")'><span class='glyphicon glyphicon-trash'></span> </button> </td></tr>"
+                
+              
+            }
+            document.getElementById("table").innerHTML= y;
+        }
+</script>

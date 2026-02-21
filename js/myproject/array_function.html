@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Basic</title>
+    </head>
+    <body>
+        <h1>The Frist Message</h1>
+        <p id = "frist_array"></p>
+        <p id="for_carname"></p>
+        <p id="third_array"></p>
+    </body>
+</html>
+<script>
+    const frout_value =["apple","bnanan "," oringe"]
+    //car_value = ["coconate"];    is not found
+    console.log(frout_value[0])
+    document.getElementById("frist_array").innerHTML = frout_value;
+    
+    let car_name =["VOLVO", "FORCHUNAR"]
+    console.log(car_name[0]);
+    car_name[0] = "BMW";
+    car_name[2] = "MARUTISUZUKI"
+    document.getElementById("for_carname").innerHTML = car_name;
+    console.log(car_name[0]);
+
+    const name_value = new Array("irfa", "ram");
+    console.log(name_value[0])
+    document.getElementById("third_array").innerHTML = name_value;
+</script>

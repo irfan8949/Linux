@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Typeof function</title>
+   </head>
+   <body><p id="demo"></p></body>
+</html>
+<script>
+    const arr =[ "apple", "banana", "mango"]
+    const name = "irfan";
+    const change_string = arr.toString();
+    document.getElementById("demo").innerHTML = change_string;
+    
+    if( arr instanceof Array){
+        console.log("who is array")
+    }
+
+    console.log(typeof arr)
+    console.log(Array.isArray(arr))
+
+    console.log(typeof name)
+    console.log(Array.isArray(name))
+</script>

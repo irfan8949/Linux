@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All functions</title>
+    </head>
+    <body>
+        <h>The All function Use For Array</h>
+        <p id ="demo"></p>
+    </body>
+</html>
+<script>
+    let arr = [1,2,3, {name : "irfan"}];
+    console.log(typeof arr)
+    let reustle = arr.toString();
+    console.log( typeof  reustle);
+    //let not = arr.length;
+   // console.log(not)
+    document.getElementById("demo").innerHTML = arr[arr.length-1].name;
+</script> 

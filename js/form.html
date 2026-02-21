@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+            }
+            table ,th ,td {
+                border: 1px solid;
+                text-align: center;
+                margin-left: auto; 
+                margin-right: auto;
+            }
+            th{
+                background-color: rgb(26, 104, 104);
+                color: white;
+                padding: 20px;
+            }
+        </style>
+        <title>Form Replace</title>
+    </head>
+    <body>
+        <h1>Student Information form</h1>
+        <input type="text"  id ="placeholder_text" placeholder="fristname">
+        <p><button  onclick ="add_button()"   id ="type_button">Add</button>  <button  onclick ="cancel_button()"  id="remove_data">Cancel</button></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Edit Name</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id = "table_data"></tbody>
+        </table>
+    </body>
+</html>
+<script>
+     var arr_name = []
+    function add_button(){
+        
+        var table_main = document.getElementById("placeholder_text").value;
+        arr_name.push(table_main)
+        printout();
+        
+    }
+    function cancel_button(){
+        document.getElementById("placeholder_text").value ="";
+    }
+
+       
+
+    function edit_button(){
+        document.getElementById("placeholder_text").innerHTML= 'value';
+        printout();
+    }
+    function delete_button(){
+        arr_name.splice(index, 1)
+        printout();
+    }
+    function printout(){
+    arr_length = arr_name.length;
+        
+        let y ="";
+        for(let x = 0; x<arr_length; x++){
+            y +=  "<tr><td>"+(x+1)+"</td><td>"+arr_name[x]+"</td><td><button onlick='edit_button("+x+")'>Edit</button></td><td><button onlick ='delete_button("+x+") '>Delete</button></td></tr>";
+        }
+        document.getElementById("table_data").innerHTML=y;
+    }
+</script>
